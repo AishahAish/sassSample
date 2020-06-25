@@ -1,0 +1,136 @@
+.navbar-default
+{
+    padding-top: 0;    margin-bottom: 0;
+    .navbar-brand>img {     
+        max-height: 70px;
+    }   
+    .navbar-nav>li>a {
+    padding: 20px 10px;
+    }
+}
+.footer-wrapper {
+    padding: 0;
+    .copyright p {
+        padding: 15px 0;
+    }
+}
+
+@for $i from 10 through 50
+{
+    .p#{$i}
+    {
+        padding: #{$i}px;
+    }
+}
+@for $i from 10 through 50
+{
+.m#{$i}
+{
+    margin: #{$i}px;
+}
+}
+@for $i from 1 through 50
+{
+.mb-#{$i}
+{
+    margin-bottom: #{$i}em;
+}
+}
+
+
+@mixin d-flex
+{
+display: flex;
+align-items: center;
+justify-content: center;
+justify-self: center;
+align-self: center;
+}
+.overlay-fluid-block, .home
+{
+    @include d-flex;
+}
+$slider-height:650px;
+.home, .overlay-fluid-block
+{
+ min-height: $slider-height;   
+}
+@mixin olive-bg
+{
+background: #00b67a;
+}
+.social, .footer-menu {
+    @include olive-bg; 
+}
+.footer {
+    color: #fff;
+    background: #039565
+}
+
+.gallery {
+   column-count: 3;
+}
+.gallery .pics 
+{
+ transition: all 350ms ease;
+ }
+ .gallery .animation {
+    transform: scale(1); 
+}  
+.justify-content-center {
+   justify-content: center !important;
+}   
+.d-flex {
+   display: flex !important;
+}
+.btn[class*="btn-outline-"] {
+margin: 0 5px;
+}
+
+.gallery .animation img{
+    transition: 0.5s;
+    display: block;
+    max-width: 100%;
+    height: auto;
+    position: relative;
+}
+.gallery .animation a {
+    position: relative;   
+    overflow: hidden; 
+    display: block;  
+}
+.gallery .animation a:hover{
+ box-shadow: 0px 18px 71px -10px rgba(0, 0, 0, 0.25);
+}
+.gallery .animation a:hover img{
+    transform: scale(1.1);
+   }
+
+.gallery-section .btn
+{
+width: 100px;line-height: 15px;
+height: 40px; box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1); background: #fff;
+}
+.abt_service 
+{
+img
+{
+max-width: 70px;
+}
+p {
+    font-size: 14px;
+}
+}
+h1,h2,h3,h4,h5,h6
+{
+    font-weight: 700;    color: #039565;
+}
+.footer-menu
+{
+ padding: 30px 0;
+ border: none;
+ ul li, h5, p
+ {
+     color: #fff;text-transform: initial;
+ }   
+}
